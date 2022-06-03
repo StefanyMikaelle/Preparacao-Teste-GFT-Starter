@@ -1,0 +1,789 @@
+|---Bootcamp Start Woman GFT
+
+-> Módulo I - Conteúdo de abertura
+
+01- Lógica de Programação Essencial;
+02- Aprenda o que são Estrutura de Dados e Algoritmos;
+03- Introdução ao Git e ao GitHub;
+04- Criando seu Primeiro Repositório no GitHub; 
+Para Compartilhar Seu Progresso;
+
+-> Módulo II - Setup
+
+05- Dominando IDEs Java;
+
+-> Módulo III - Java Fundamental
+
+06- Variáveis, Tipos de Dados e Operadores Matemáticos em Java;
+07- Entendendo Métodos Java;
+08- Lógica Condicional e Controle de Fluxos em Java ;
+09- Estruturas de Repetição e Arrays em Java (DESAFIO);
+10- Trabalhando com Collections Java;
+
+** Desafios Inicias Java - GFT Start Woman
+
+-> Módulo IV - Java Essencial
+
+11- Debugging Java;
+12- Tratamento de Exceções em Java;
+13- Programação Orientada a Objetos (DESAFIO);
+14- Criando um Banco Digital com Java e Orientação a Objetos;
+
+** Desafios Intermediários Java - GFT Start Woman;
+
+-> Módulo V - Arquitetura de Sistemas
+
+15- Introdução ao HTTP/HTTPS;
+
+-> Módulo VI - Java Avançado
+
+16- Simplificando Projetos Java com o Spring Boot;
+
+** Explorando Padrões de Projetos na Prática com Java;
+
+-----------------------------------------------------------------------------------------------------------
+
+Olá, Futura Starter! 🚀
+
+Confira as dicas que separamos para sua participação na etapa técnica! 📢
+
+
+✅ Revise o conteúdo do bootcamp para responder potenciais questões técnicas. Quando nos dedicamos ao aprendizado de algo, temos confiança para falar sobre o assunto!;
+
+✅ Esteja preparada para os desafios de Programação Orientada à Objetos (POO);
+
+✅ Esteja preparada para os desafios de Estrutura de Repetição e Laços;
+
+✅ Esteja preparada para subir os desafios propostos na etapa técnica no GitHub e lembre de deixar seu repositório no modo público;
+
+✅ Convide o seu Raciocínio Lógico para esta etapa! O método GFT leva em consideração todos os pontos que compõem uma linha de raciocínio;
+
+✅ Gestão de tempo é essencial nesta etapa! Pegue sua água ou até mesmo sua xícara café e elimine todas as possíveis distrações. Foco é extremamente importante!
+
+
+E aí, curtiu?
+Espero ter ajudado! 😉
+
+Boa sorte e bons estudos! 🚀🚀
+
+-----------------------------------------------------------------------------------------
+
+-- ATALHOS IMPORTANTES (ECLIPSE)
+
+• Importar classes: CTRL + SHIFT + O
+• Autoendentação: CTRL + SHIFT + F
+• sysout CTRL + espaço
+• Gerando automaticamente construtores, getters e setters 
+com Eclipse
+	Botão direito -> Source -> Generate Constructor using Fields
+	Botão direito -> Source -> Generate Getters and Setters
+-------------------------------------------------------------------------------------------
+
+-- BOAS PRÁTICAS
+
+1) Sempre indique o tipo do número, se a
+expressão for de ponto flutuante (não
+inteira).
+Para double use:
+.0
+Para float use:
+f
+
+2) Convenções
+
+-> Camel Case: lastName
+	• pacotes
+	• atributos
+	• métodos
+	• variáveis e parâmetros
+-> Pascal Case: ProductService
+	• classes
+-----------------------------------------------------------------------------------------
+
+-- DECLARAÇÕES PRINCIPAIS
+
+01-> Escrita na Tela
+
+- System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+- System.out.println("RESULTADO = " + x + " METROS");
+
+
+
+02-> Casting (É a conversão explícita de um tipo para outro.)
+
+int a, b;
+double resultado;
+- resultado = (double) a / b;
+
+
+
+03-> Entrada de dados (Leitura)
+
+- Scanner sc = new Scanner(System.in);
+    ** import java.util.Scanner;
+    ** faça sc.close() quando não precisar mais do objeto sc
+
+String x;
+- x = sc.next();
+
+int x;
+- x = sc.nextInt();
+
+double x;
+- x = sc.nextDouble();
+
+	*ATENÇÃO:
+	Para considerar o separador de decimais como ponto, 
+	ANTES da declaração do Scanner, faça:
+	- Locale.setDefault(Locale.US);
+char x;
+- x = sc.next().charAt(0);
+
+Para ler um texto ATÉ A QUEBRA DE LINHA
+s1 = sc.nextLine();
+
+ATENÇÃO: quebra de linha pendente
+
+	Quando você usa um comando de leitura diferente do nextLine() e
+	dá alguma quebra de linha, essa quebra de linha fica "pendente"
+	na entrada padrão. Se você então fizer um nextLine(),aquela quebra 
+	de linha pendenteserá absorvida pelo nextLine().
+
+		Solução:Faça um nextLine() extra antes de fazer o nextLine()
+		de seu interesse.
+int x;
+- x = sc.nextInt();
+
+04-> Funções matemáticas
+
+- A = Math.sqrt(x); Variável A recebe a raiz quadrada de x
+- A = Math.pow(x, y); Variável A recebe o resultado de x elevado a y
+- A = Math.abs(x); Variável A recebe o valor absoluto de x
+
+05-> Operadores comparativos
+	
+	> maior
+	< menor
+	>= maior ou igual
+	<= menor ou igual
+	== igual
+	!= diferente
+
+06-> Operadores lógicos
+
+	&& E
+	|| OU
+	! NÃO
+
+07-> Estrutura condicional
+
+ # if
+	if ( condição 1 ) {
+	comando 1
+
+	}
+	else if ( condição 2 ) {
+	comando 2
+	comando 4
+	}
+	else {
+	comando 7
+	comando 8
+	}
+
+ # switch-case
+
+	switch ( expressão ) {
+	case valor1:
+	comando1
+	break;
+	case valor2:
+	comando2
+	break;
+	default:
+	comando3
+	break;
+	}
+ 
+ # Expressão condicional ternária
+	
+	( condição ) ? valor_se_verdadeiro : valor_se_falso
+
+ # while
+
+	while ( condição ) {
+	comando 1
+	comando 2
+	}
+ # for
+
+	for ( início ; condição ; incremento -#opcional-) {
+	comando 1
+	}
+ 
+ # do-while
+	
+	do {
+	comando 1
+	comando 2
+	} while ( condição );
+
+
+08-> Operadores de atribuição cumulativa
+
+	a += b; a = a + b;
+	a -= b; a = a - b;
+	a *= b; a = a * b;
+	a /= b; a = a / b;
+	a %= b; a = a % b;
+
+09-> Operadores bitwise
+
+	& Operação "E" bit a bit
+	| Operação "OU" bit a bit
+	^ Operação "OU-exclusivo" bit a bit
+		
+		Exemplo:
+			0101 1001
+			0011 1100
+			___________
+		     &: 0001 1000
+
+10-> Funções interessantes para String
+
+	• Formatar: toLowerCase(), toUpperCase(), trim()
+	• Recortar: substring(inicio), substring(inicio, fim)
+	• Substituir: Replace(char, char), Replace(string, string)
+	• Buscar: IndexOf, LastIndexOf
+	• str.Split(" ")
+			** Operação split
+			String s = "potato apple lemon";
+			String[] vect = s.split(" ");
+			String word1 = vect[0];
+			String word2 = vect[1];
+			String word3 = vect[2];
+				Resultado:
+				0 "potato"
+				1 "apple"
+				2 "lemon"
+
+11-> Classe (É um tipo estruturado que pode conter membros)
+
+	** Objetos (são instâncias da classe)
+	** Instanciação(alocação dinâmica de memória)
+		Exemplo
+		double areaX, areaY, p;  -- Está na memória Stack com valor 
+					 recebido;
+		Triangle x, y;     
+		x = new Triangle();	-- Está na memória Heap com endereço
+					da memória;
+
+		y = new Triangle();
+
+%%% PRINCIPAL
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+import entities.Triangle;
+
+public class Program {
+public static void main(String[] args) {
+
+Locale.setDefault(Locale.US);
+Scanner sc = new Scanner(System.in);
+
+Triangle x, y;
+x = new Triangle();
+y = new Triangle();
+
+System.out.println("Enter the measures of triangle X: ");
+x.a = sc.nextDouble();
+x.b = sc.nextDouble();
+x.c = sc.nextDouble();
+
+System.out.println("Enter the measures of triangle Y: ");
+y.a = sc.nextDouble();
+y.b = sc.nextDouble();
+y.c = sc.nextDouble();
+double areaX = x.area();
+double areaY = y.area();
+
+		%%% Exemplo da declaração de classe
+		package entities;
+		public class Triangle {
+		public double a;
+		public double b;
+		public double c;
+		public double area() {
+		double p = (a + b + c) / 2.0;
+		return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+		}
+		}
+	
+	PROJETO DA CLASSE (UML)
+	|    Triangle     | - Nome da classe
+	|  - A: double    | - Atributos da classe
+	|  - B: double    | - Atributos da classe
+	|  - C: double    | - Atributos da classe
+	|+ Area(): double | - Métodos da classe
+
+12-> toString - converte o objeto para string
+
+	%%% PRINCIPAL
+package application;
+import java.util.Locale;
+import java.util.Scanner;
+import entities.Product;
+public class Program {
+public static void main(String[] args) {
+Locale.setDefault(Locale.US);
+Scanner sc = new Scanner(System.in);
+Product product = new Product();
+System.out.println("Enter product data: ");
+System.out.print("Name: ");
+product.name = sc.nextLine();
+System.out.print("Price: ");
+product.price = sc.nextDouble();
+System.out.print("Quantity in stock: ");
+product.quantity = sc.nextInt();
+System.out.println();
+System.out.println("Product data: " + product);
+System.out.println();
+System.out.print("Enter the number of products to be added in stock: ");
+int quantity = sc.nextInt();
+product.addProducts(quantity);
+System.out.println();
+System.out.println("Updated data: " + product);
+System.out.println();
+System.out.print("Enter the number of products to be removed from stock: ");
+quantity = sc.nextInt();
+product.removeProducts(quantity);
+System.out.println();
+System.out.println("Updated data: " + product);
+sc.close();
+}
+}
+
+		%%% Exemplo da declaração toString
+		package entities;
+		public class Product {
+		public String name;
+		public double price;
+		public int quantity;
+		public double totalValueInStock() {
+		return price * quantity;
+		}
+		public void addProducts(int quantity) {
+		this.quantity += quantity;
+		}
+		public void removeProducts(int quantity) {
+		this.quantity -= quantity;
+		}
+		public String toString() {
+		return name
+		+ ", $ "
+		+ String.format("%.2f", price)
+		+ ", "
+		+ quantity
+		+ " units, Total: $ "
+		+ String.format("%.2f", totalValueInStock());
+		}
+		}
+
+13-> Membros estáticos (São membros que fazem sentido independentemente 
+de objetos. Não precisam de objeto para serem chamados. São chamados a 
+partir do próprio nome da classe.)
+
+## Exemplo
+
+public double circumference(double radius) {
+return 2.0 * PI * radius;
+}
+** Declaração de Constantes
+- public static final double PI = 3.14159;
+
+14-> Construtor ( É uma operação especial da classe, que executa no momento da
+instanciação do objeto)
+
+	Usos comuns:
+• Iniciar valores dos atributos
+• Permitir ou obrigar que o objeto receba dados / dependências no momento de sua
+instanciação (injeção de dependência)
+
+%% Exemplo
+
+package entities;
+public class Product {
+public String name;
+public double price;
+public int quantity;
+public Product(String name, double price, int quantity) {
+this.name = name;
+this.price = price;
+this.quantity = quantity;
+}
+(...)
+
+System.out.println("Enter product data: ");
+System.out.print("Name: ");
+String name = sc.nextLine();
+System.out.print("Price: ");
+double price = sc.nextDouble();
+System.out.print("Quantity in stock: ");
+int quantity = sc.nextInt();
+Product product = new Product(name, price, quantity);
+
+15-> Palavra this (É uma referência para o próprio objeto)
+
+	Usos comuns:
+• Diferenciar atributos de variáveis locais
+• Passar o próprio objeto como argumento na chamada de um método ou
+construtor
+
+%% Exemplo 01 (Diferenciar atributos de variáveis locais)
+
+-PRINCIPAL
+Product product = new Product("TV", 1500.0, 0);
+
+-ENTITIES
+public Product(String name, double price, int quantity) {
+this.name = name;
+this.price = price;
+this.quantity = quantity;
+}
+	
+%% Exemplo 02 (Passar o próprio objeto como argumento na
+chamada de um método ou construtor)
+
+public class ChessMatch {
+(...)
+placeNewPiece('e', 1, new King(board, Color.WHITE, this));
+(...)
+
+15-> Sobrecarga (É um recurso que uma classe possui de oferecer mais de uma
+operação com o mesmo nome, porém com diferentes listas de parâmetros).
+
+ 	***NOTA: é possível também incluir um construtor padrão
+
+%% Exemplo
+
+package entities;
+public class Product {
+public String name;
+public double price;
+public int quantity;
+public Product() {
+}
+public Product(String name, double price, int quantity) {
+this.name = name;
+this.price = price;
+this.quantity = quantity;
+}
+public Product(String name, double price) {
+this.name = name;
+this.price = price;
+}
+(...)
+
+16-> Encapsulamento ( É um princípio que consiste em esconder detalhes 
+de implementação de uma classe, expondo apenas operações seguras e que 
+mantenham os objetos em um estado consistente.)
+
+	*** Regra de ouro: o objeto deve sempre estar em um estado consistente,
+	 e a própria classe deve garantir isso.
+
+	***Regra geral básica
+	• Um objeto NÃO deve expor nenhum atributo (modificador de acesso
+	private)
+	• Os atributos devem ser acessados por meio de métodos get e set
+
+%%% Padrão para implementação de getters e setters
+private String name;
+private double price;
+public String getName() {
+return name;
+}
+public void setName(String name) {
+this.name = name;
+}
+public double getPrice() {
+return price;
+}
+public void setPrice(double price) {
+this.price = price;
+}
+
+17-> Modificadores de acesso
+
+• private: o membro só pode ser acessado na própria classe
+• (nada): o membro só pode ser acessado nas classes do mesmo pacote
+• protected: o membro só pode ser acessado no mesmo pacote, bem como em
+subclasses de pacotes diferentes
+• public: o membro é acessado por todas classes (ao menos que ele resida em
+um módulo diferente que não exporte o pacote onde ele está)
+
+18-> Classes são tipos referência (Variáveis cujo tipo são classes não devem 
+ser entendidas como caixas, mas sim “tentáculos” (ponteiros) para caixas)
+
+%% Exemplo 01
+
+Product p1, p2;
+p1 = new Product("TV", 900.00, 0);
+p2 = p1;
+p2 = p1;
+		**"p2 passa a apontar para onde p1 aponta"
+
+%% Exemplo 02 (Valor "null" - Tipos referência aceitam o valor "null", 
+que indica que a variável aponta pra ninguém.)
+
+Product p1, p2;
+p1 = new Product("TV", 900.00, 0);
+p2 = null;
+
+19-> Valores padrão
+
+• Quando alocamos (new) qualquer tipo estruturado (classe ou array),
+são atribuídos valores padrão aos seus elementos
+• números: 0
+• boolean: false
+• char: caractere código 0
+• objeto: null
+
+%% Exemplo
+
+Product p = new Product();
+
+20-> Vetor
+
+%% Exemplo
+...
+int n = sc.nextInt();
+double[] vect = new double[n];
+for (int i=0; i<n; i++) {
+vect[i] = sc.nextDouble();
+}
+double sum = 0.0;
+for (int i=0; i<n; i++) {
+sum += vect[i];
+}
+...
+
+21-> Boxing ( É o processo de conversão de um objeto tipo valor para um objeto
+tipo referência compatível)
+
+int x = 20;
+Object obj = x;
+
+22-> Unboxing ( É o processo de conversão de um objeto tipo referência para um
+objeto tipo valor compatível)
+
+int x = 20;
+Object obj = x;
+int y = (int) obj;
+
+23-> Wrapper (São classes equivalentes aos tipos primitivos, Boxing e unboxing é 
+natural na linguagem)
+
+** Uso comum: campos de entidades em sistemas de informação (IMPORTANTE!)
+• Pois tipos referência (classes) aceitam valor null e usufruem dos recursos OO
+
+Integer x = 10;
+int y = x * 2;
+
+24-> Listas 
+
+Lista é uma estrutura de dados:
+• Homogênea (dados do mesmo tipo)
+• Ordenada (elementos acessados por meio de posições)
+• Inicia vazia, e seus elementos são alocados sob demanda
+• Cada elemento ocupa um "nó" (ou nodo) da lista
+
+• Tipo (interface): List
+• Classes que implementam: ArrayList, LinkedList, etc.
+
+--- Principais comandos
+Tamanho da lista: size()
+• Obter o elemento de uma posição: get(position)
+• Inserir elemento na lista: add(obj), add(int, obj)
+• Remover elementos da lista: remove(obj), remove(int), removeIf(Predicate)
+• Encontrar posição de elemento: indexOf(obj), lastIndexOf(obj)
+• Filtrar lista com base em predicado:
+List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+• Encontrar primeira ocorrência com base em predicado:
+Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+
+
+package application;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+public class Program {
+public static void main(String[] args) {
+List<String> list = new ArrayList<>();
+list.add("Maria");
+list.add("Alex");
+list.add("Bob");
+list.add("Anna");
+list.add(2, "Marco");
+System.out.println(list.size());
+for (String x : list) {
+System.out.println(x);
+}
+System.out.println("---------------------");
+list.removeIf(x -> x.charAt(0) == 'M');
+for (String x : list) {
+System.out.println(x);
+}
+System.out.println("---------------------");
+System.out.println("Index of Bob: " + list.indexOf("Bob"));
+System.out.println("Index of Marco: " + list.indexOf("Marco"));
+System.out.println("---------------------");
+List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
+for (String x : result) {
+System.out.println(x);
+}
+System.out.println("---------------------");
+String name = list.stream().filter(x -> x.charAt(0) == 'J').findFirst().orElse(null);
+System.out.println(name);
+}
+}
+
+25-> Matrizes
+
+Em programação, "matriz" é o nome dado a arranjos bidimensionais
+• Atenção: "vetor de vetores"
+Arranjo (array) é uma estrutura de dados:
+• Homogênea (dados do mesmo tipo)
+• Ordenada (elementos acessados por meio de posições)
+• Alocada de uma vez só, em um bloco contíguo de memória
+
+%% Exemplo
+int[][] mat = new int[m][n];
+		
+		for (int i=0; i<mat.length; i++) {
+			for (int j=0; j<mat[i].length; j++) {
+				mat[i][j] = sc.nextInt();
+			}
+		}
+
+26-> Date
+
+-- SimpleDateFormat
+
+Define formatos para conversão entre Date e String
+• dd/MM/yyyy -> 23/07/2018
+• dd/MM/yyyy HH:mm:ss -> 23/07/2018 15:42:07
+
+-- Padrão ISO 8601 e classe Instant
+
+• Formato: yyyy-MM-ddTHH:mm:ssZ
+• Exemplo: "2018-06-25T15:42:07Z"
+• Date y3 = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+
+
+SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+sdf3.setTimeZone(TimeZone.getTimeZone("GMT"));
+Date x1 = new Date();
+Date x2 = new Date(System.currentTimeMillis());
+Date x3 = new Date(0L);
+Date x4 = new Date(1000L * 60L * 60L * 5L);
+Date y1 = sdf1.parse("25/06/2018");
+Date y2 = sdf2.parse("25/06/2018 15:42:07");
+Date y3 = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+System.out.println("x1: " + x1);
+System.out.println("-------------");
+System.out.println("x1: " + sdf2.format(x1));
+System.out.println("-------------");
+System.out.println("x1: " + sdf3.format(x1));
+
+27-> Manipulando uma data com Calendar
+
+-- Somando uma unidade de tempo
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+System.out.println(sdf.format(d));
+Calendar cal = Calendar.getInstance();
+cal.setTime(d);
+cal.add(Calendar.HOUR_OF_DAY, 4);
+d = cal.getTime();
+System.out.println(sdf.format(d));
+
+-- Obtendo uma unidade de tempo
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+System.out.println(sdf.format(d));
+Calendar cal = Calendar.getInstance();
+cal.setTime(d);
+int minutes = cal.get(Calendar.MINUTE);
+int month = 1 + cal.get(Calendar.MONTH);
+System.out.println("Minutes: " + minutes);
+System.out.println("Month: " + month);
+
+28-> Visão geral de Git e Github
+
+GIT - é um sistema de versionamento: você controla as modificações de um projeto por meio de
+versões chamadas "commits".
+
+Github - É um serviço online de hospedagem de repositórios Git remotos.
+
+%% Passo a passo: salvar primeira versão de um
+projeto no Github
+
+git init
+git add .
+git commit -m "Mensagem explicativa"
+git branch -M main
+git remote add origin git@github.com:seuusuario/seurepositorio.git
+git push -u origin main
+
+%% Passo a passo: salvar uma nova versão
+
+git status
+git add .
+git commit -m "Mensagem explicativa"
+git push
+
+%% Demo: clonar e modificar um projeto de um repositório
+remoto que você tem permissão para alterar
+
+git clone git@github.com:seuusuario/seurepositorio.git
+git add .
+git commit -m "Mensagem explicativa"
+git push
+
+29-> Enumerações (É um tipo especial que serve para especificar de forma literal um
+conjunto de constantes relacionadas)
+
+package entities.enums;
+public enum OrderStatus {
+PENDING_PAYMENT,
+PROCESSING,
+SHIPPED,
+DELIVERED;
+}
+package entities;
+import java.util.Date;
+import entities.enums.OrderStatus;
+public class Order {
+private Integer id;
+private Date moment;
+private OrderStatus status;
+(...)
+
+%% Conversão de String para enum
+OrderStatus os1 = OrderStatus.DELIVERED;
+OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
+********************************************************
+
+Como executar o debug do Eclipse
+• Para marcar uma linha de breakpoint:
+• Run -> Toggle Breakpoint
+• Para iniciar o debug:
+• Botão direito na classe -> Debug as -> Java Application
+• Para executar uma linha:
+• F6
+• Para interromper o debug:
