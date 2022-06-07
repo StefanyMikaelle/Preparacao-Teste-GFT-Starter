@@ -777,6 +777,11 @@ private OrderStatus status;
 %% Conversão de String para enum
 OrderStatus os1 = OrderStatus.DELIVERED;
 OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
+
+30-> @Override (usada na classe filha quando quer fazer 
+o mesmo calculo da classe pai mudando algumas coisas)
+
+
 ********************************************************
 
 Como executar o debug do Eclipse
@@ -787,3 +792,161 @@ Como executar o debug do Eclipse
 • Para executar uma linha:
 • F6
 • Para interromper o debug:
+
+
+*********************************************************
+
+EXEMPLO REFERENCIA:
+
+------------------------------------------
+public class Main {
+
+	public static void main(String[] args ) {
+		
+		Cliente pedro = new Cliente ();
+		pedro.setNome("Pedro Henrique");
+		
+		Conta cc = new ContaCorrente (pedro);
+		Conta poupanca = new ContaPoupanca (pedro);
+		
+		cc.depositar(100);
+		cc.transferir(100,poupanca);
+		
+		cc.imprimirExtrato();
+		poupanca.imprimirExtrato();
+		
+	}
+	
+}
+------------------------------------------
+
+public class Banco {
+
+	public String nome;
+	private List <Conta> contas;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Conta> getContas() {
+		return contas;
+	}
+
+	public void setContas(List<Conta> contas) {
+		this.contas = contas;
+	}
+	
+	
+	
+}
+----------------------------------------------
+public class Cliente {
+
+	private String nome;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+		
+}
+
+------------------------------------------------
+public abstract	class Conta implements IConta {
+
+	private static final int AGENCIA_PADRAO = 1;
+	private static  int SEQUENCIAL = 1;
+	
+	protected int agencia;
+	protected int numero;
+	protected double saldo;
+	protected Cliente cliente;
+	
+
+	public  Conta (Cliente cliente ) {
+		this.agencia = Conta.AGENCIA_PADRAO;
+		this.numero = SEQUENCIAL++;
+		this.cliente = cliente ;
+	}
+	
+	// Implementar os valores necessários para utilizar o IConta
+	
+	@Override
+	public void sacar(double valor) {
+		saldo -= valor;
+	}
+
+	@Override
+	public void depositar(double valor) {
+		saldo += valor;
+	}
+
+	@Override
+	public void transferir(double valor, Conta contaDestino) {
+		this.sacar(valor);
+		contaDestino.depositar(valor);
+		
+		
+	}
+	
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	
+	protected void imprimirInfosComuns() {
+		System.out.println(String.format("Titular: %s",this.cliente.getNome()));
+		System.out.println(String.format("Agencia: %d",this.agencia));
+		System.out.println(String.format("Numero: %d",this.numero));
+		System.out.println(String.format("Saldo: %.2f",this.saldo));
+	}
+	
+}
+--------------------------------------------------------------
+public class ContaCorrente extends Conta {
+
+	public ContaCorrente(Cliente cliente) {
+		super(cliente);
+	}
+	
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("***Extrato Conta Corrente***");
+		super.imprimirInfosComuns();
+		
+	}
+
+
+}
+------------------------------------------------
+public class ContaPoupanca extends Conta {
+
+	
+	public ContaPoupanca(Cliente cliente) {
+		super(cliente);
+	}
+
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("***Extrato Conta Poupança***");
+		super.imprimirInfosComuns();
+	}
+
+}

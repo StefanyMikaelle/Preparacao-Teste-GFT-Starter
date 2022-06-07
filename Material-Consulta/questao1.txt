@@ -1,0 +1,96 @@
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//ContaCorrente(Integer numero, String titular, Double saldo)
+		Conta cc = new ContaCorrente(10, "Pedro Henrique", 100.00);
+		cc.rendimento(100.00);
+		Conta cp = new ContaPoupanca(8, "Stefany Mikaelle", 90.00);
+		cp.rendimento(90.00);
+		
+		
+		
+		
+	
+	}
+
+}
+
+
+---------------------
+
+public class Conta {
+	protected Integer numero;
+	protected String titular;
+	protected Double saldo;
+	protected double rendimento;
+	
+	public Conta(Integer numero, String titular, Double saldo) {
+		
+		this.numero = numero;
+		this.titular = titular;
+		this.saldo = saldo;
+	}
+	// Encapsulamento get= envia , set = altera 	
+	
+	public String getTitular() {
+		return titular;
+	}
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	public String toString() {
+		return "Titular: " + this.titular
+				+ "Numero: " + this.numero 
+				+ "Rendimento : " + String.format("%.2f", rendimento);
+	}
+
+	public void rendimento(double saldo) {
+		rendimento = saldo; 
+	}
+	
+
+	
+	
+
+}
+--------------------
+public class ContaCorrente extends Conta{
+	
+	public ContaCorrente(Integer numero, String titular, Double saldo) {
+		super(numero, titular, saldo);
+		
+	}
+
+	@Override
+	public void rendimento(double saldo) {
+		rendimento = saldo*0.03; 
+	}
+	
+	// ContaPoupanca: rendimento = saldo * 0.03;
+		
+	 	
+}
+------------------------
+public class ContaPoupanca extends Conta{
+	
+	
+	public ContaPoupanca(Integer numero, String titular, Double saldo) {
+		super(numero, titular, saldo);
+	}
+
+	@Override
+	public void rendimento(double saldo) {
+		rendimento = saldo*0.03; 
+	}
+	
+	
+	// ContaPoupanca: rendimento = saldo * 0.05;
+}
